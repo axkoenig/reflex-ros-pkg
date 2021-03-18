@@ -25,6 +25,7 @@ __email__ = 'reflex-support@righthandrobotics.com'
 
 import rospy
 from std_srvs.srv import Empty
+from __future__ import print_function
 
 import reflex_msgs.msg
 import reflex_msgs.srv
@@ -137,16 +138,16 @@ class ReflexTakktileHand(ReflexHand):
 motor, or 'q' to indicate that the zero point has been reached\n")
             while not command.lower() == 'q':
                 if command.lower() == 't' or command.lower() == 'tt':
-                    print "Tightening motor " + motor
+                    print("Tightening motor " + motor)
                     self.motors[motor].tighten(0.35 * len(command) - 0.3)
                 elif command.lower() == 'l' or command.lower() == 'll':
-                    print "Loosening motor " + motor
+                    print("Loosening motor " + motor)
                     self.motors[motor].loosen(0.35 * len(command) - 0.3)
                 else:
-                    print "Didn't recognize that command, use 't', 'l', or 'q'"
+                    print("Didn't recognize that command, use 't', 'l', or 'q'")
                 command = raw_input("Tighten: 't'\tLoosen: 'l'\tDone: 'q'\n")
             rospy.loginfo("Saving current position for %s as the zero point", motor)
-        print "Calibration complete, writing data to file"
+        print("Calibration complete, writing data to file")
         self.zero_pose_service()
         return []
 

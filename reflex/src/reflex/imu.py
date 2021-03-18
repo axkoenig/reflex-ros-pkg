@@ -21,6 +21,7 @@ import rospy
 import numpy as np
 import math
 import argparse # THIS MODULE IS NOT USED
+from __future__ import print_function
 
 from reflex_msgs2.msg import Hand
 from reflex_msgs2.srv import DistalRotation
@@ -38,7 +39,7 @@ def quaternion_to_matrix(q):
             [2*q[1]*q[2] + 2*q[3]*q[0],     1 - 2*q[1]*q[1] - 2*q[3]*q[3], 2*q[2]*q[3] - 2*q[1]*q[0]],
             [2*q[1]*q[3] - 2*q[2]*q[0],     2*q[2]*q[3] + 2*q[1]*q[0],     1 - 2*q[1]*q[1] - 2*q[2]*q[2]]])
     except ZeroDivisionError:
-        print "An IMU is not providing data. Check connections."
+        print("An IMU is not providing data. Check connections.")
         return np.array([[0, 0, 0], [0, 0, 0], [0, 0, 0]])
     
 

@@ -3,6 +3,7 @@ import sys
 import time
 import struct
 from socket import *
+from __future__ import print_function
 
 ## looking at the finger side, "thumb" up:
 ##
@@ -72,12 +73,12 @@ def onepkt():
 
 def hear():
     pkt, addr = onepkt()
-    print "from:", addr
+    print("from:", addr)
     # print len(pkt), repr(pkt)
     state_t.parse(pkt)
     state_t.systime /= 1.0e6
     for name, _, _ in state_t_decl:
-        print "%s: %s" % (name, getattr(state_t, name))
+        print("%s: %s" % (name, getattr(state_t, name)))
 
 # Sample output:
 #

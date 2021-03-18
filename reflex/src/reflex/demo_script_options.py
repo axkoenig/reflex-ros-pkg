@@ -5,6 +5,7 @@
 
 
 from math import pi, cos
+from __future__ import print_function
 
 import rospy
 from std_srvs.srv import Empty
@@ -107,16 +108,16 @@ def main():
 
         if demo_type == 6:
             enable_tactile_stops()
-            print "TakkTile Sensors Enabled"
+            print("TakkTile Sensors Enabled")
 
         if demo_type == 7:
             disable_tactile_stops()
-            print "TakkTile Sensors Disabled"
+            print("TakkTile Sensors Disabled")
 
             
         if demo_type == 8:
             calibrate_fingers()
-            print "Finger Calibration Complete"
+            print("Finger Calibration Complete")
        
         if demo_type == 9:
             break
