@@ -17,11 +17,11 @@
 #############################################################################
 
 
+from __future__ import print_function
 import rospy
 import numpy as np
 import math
 import argparse # THIS MODULE IS NOT USED
-from __future__ import print_function
 
 from reflex_msgs2.msg import Hand
 from reflex_msgs2.srv import DistalRotation

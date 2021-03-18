@@ -16,6 +16,7 @@
 # limitations under the License.
 #############################################################################
 
+from __future__ import print_function
 __author__ = 'Eric Schneider'
 __copyright__ = 'Copyright (c) 2015 RightHand Robotics'
 __license__ = 'Apache License 2.0'
@@ -25,7 +26,6 @@ __email__ = 'reflex-support@righthandrobotics.com'
 from os.path import join
 import yaml
 import time
-from __future__ import print_function
 
 from dynamixel_msgs.msg import JointState
 from dynamixel_msgs.msg import Encoder
@@ -101,7 +101,7 @@ class ReflexOneHand(ReflexHand):
     #         motor_joint_angle = self.motors[self.namespace + motor_names[i]].get_current_joint_angle() #self.calc_motor_angle(self.MOTOR_TO_JOINT_INVERTED[i], raw_motor_angle, self.MOTOR_TO_JOINT_GEAR_RATIO[i], self.motor_zero_point[i])
     #         #motor_angles[i] = raw_motor_angle
     #         self.distal_approx[i] = self.calc_distal_angle(motor_joint_angle, self.proximal_angle[i])
-    #     #print motor_angles
+    #     #print(motor_angles)
 
     def _receive_cmd_cb(self, data):
         self.disable_force_control()

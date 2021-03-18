@@ -42,7 +42,7 @@ def main():
     	rospy.sleep(2)
     	pos_pub.publish(PoseCommand(f1=0, f2=0, f3=0, preshape=0.0))
     	rospy.sleep(2)
-    	print (i)
+    	print(i)
     # raw_input("...\n")
 
     # ##################################################################################################################
