@@ -16,16 +16,16 @@
 # limitations under the License.
 #############################################################################
 
+from __future__ import print_function
+
 __author__ = 'Eric Schneider'
 __copyright__ = 'Copyright (c) 2015 RightHand Robotics'
 __license__ = 'Apache License 2.0'
 __maintainer__ = 'RightHand Robotics'
 __email__ = 'reflex-support@righthandrobotics.com'
 
-
 import rospy
 from std_srvs.srv import Empty
-from __future__ import print_function
 
 import reflex_msgs.msg
 import reflex_msgs.srv

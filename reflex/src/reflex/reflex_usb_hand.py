@@ -16,14 +16,14 @@
 # limitations under the License.
 #############################################################################
 
+from __future__ import print_function
+
 __author__ = 'Eric Schneider'
 __copyright__ = 'Copyright (c) 2015 RightHand Robotics'
 __license__ = 'Apache License 2.0'
 __maintainer__ = 'RightHand Robotics'
 __email__ = 'reflex-support@righthandrobotics.com'
 
-
-from __future__ import print_function
 from os.path import join
 import yaml
 import time
